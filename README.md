@@ -67,6 +67,11 @@ To preview and see more elaborate component documentation, you can run storybook
 
 When documenting new components with Storybook, you should create a file `<Component>.stories.tsx`. This is the story-file that will define the documentation for the specific component. Every story should be placed in `./stories`. A story file has full React support for elaborate documentation.
 
+To run storybook, you need to install the cli globally:
+```
+npm install -g @storybook/cli
+```
+
 **Export default**  
 Each story should contain an `export default` object, which determines where your story goes in the story list. As an example, see the export default object from the DropDown component:
 
