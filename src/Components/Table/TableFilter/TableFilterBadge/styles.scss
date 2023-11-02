@@ -1,0 +1,9 @@
+@import '../../../../Styles/Styles.scss';
+
+.scTableFilterBadge {
+	margin-left: 20px;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	white-space: nowrap;
+}

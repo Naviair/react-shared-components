@@ -1,0 +1,27 @@
+@import '../../Styles/Styles.scss';
+
+.scDrawerHeader {
+	display: flex;
+	width: 100%;
+
+	.scDrawerHeaderRight {
+		flex: 1;
+		justify-content: flex-end;
+		color: $BrandColor;
+		text-align: right;
+		font-size: larger;
+	}
+
+	.scDrawerHeaderLeft {
+		flex: 1;
+		justify-content: flex-start;
+		align-self: center;
+	}
+}
+
+.scDrawerButton {
+	text-align: right !important;
+	.cancel {
+		margin-right: 8px;
+	}
+}

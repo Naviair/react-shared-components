@@ -1,0 +1,47 @@
+%section {
+	flex: 1;
+}
+
+.content-div {
+	margin-bottom: 10px;
+}
+
+.content-body {
+	display: flex;
+	width: 100%;
+	padding-bottom: '4px';
+}
+
+.left {
+	@extend %section;
+	justify-content: flex-start;
+	margin-left: 1px;
+}
+
+.center {
+	@extend %section;
+	justify-content: center;
+}
+
+.right  {
+	@extend %section;
+	justify-content: flex-end;
+	margin-right: 1px;
+}
+
+.drawerTitle {
+	font-weight: bold;
+	margin-top: -10px;
+}
+
+.badge {
+	background-color: #96ae09 !important;
+}
+
+.divider {
+	margin-top: 15px !important;
+}
+
+.menu-body {
+	margin-top: 10px;
+}

@@ -1,0 +1,24 @@
+.scErrorContent {
+	align-items: center;
+	text-align: center;
+	min-width: 50%;
+
+	button svg {
+		margin-right: 5px;
+	}
+
+	.scErrorBtnContainer {
+		button {
+			svg {
+				color: #fff !important;
+				//override antd.btn.icon
+				display: unset !important;
+				margin-top: 0 !important;
+			}
+
+			span {
+				padding-left: 5px;
+			}
+		}
+	}
+}

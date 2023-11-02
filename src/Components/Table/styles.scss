@@ -1,0 +1,36 @@
+@import '../../Styles/Styles.scss';
+
+.scTableHeader {
+	width: 100%;
+	display: flex;
+	overflow: auto;
+
+	.scTableSection {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+
+	.scTableLeft {
+		justify-content: flex-start;
+	}
+
+	.scTableCenter {
+		justify-content: center;
+	}
+
+	.scTableRight {
+		margin-left: 20px;
+		min-width: 150px;
+		justify-content: flex-end;
+	}
+}
+
+.scTableName {
+	font-weight: 400;
+}
+
+.scTable {
+	padding-bottom: 30px;
+}

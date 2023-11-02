@@ -1,0 +1,44 @@
+@import '../../Styles/Styles.scss';
+
+$Header_backgroundColor: #fff !default;
+$Header_shadowColor: #999 !default;
+$Header_shadowBlur: 12px;
+
+div.scHeader {
+	z-index: 3;
+	width: 100%;
+	box-shadow: 0 0 $Header_shadowBlur 0 $Header_shadowColor;
+	background-color: $Header_backgroundColor;
+	display: flex;
+
+	.scHeaderSection {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		height: $Header_height;
+	}
+
+	.scHeaderLeft {
+		justify-content: flex-start;
+		margin-left: 10px;
+	}
+
+	.scHeaderCenter {
+		justify-content: center;
+	}
+
+	.scHeaderRight {
+		justify-content: flex-end;
+		margin-right: 10px;
+	}
+
+	.scHeaderLogo {
+		width: 120px;
+		margin-top: 3.5px;
+	}
+
+	button.ant-btn-link:hover,
+	.Header .ant-dropdown-open {
+		background-color: #e9e9e9;
+	}
+}

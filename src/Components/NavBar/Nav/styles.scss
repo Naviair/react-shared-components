@@ -1,0 +1,78 @@
+@import '../../../Styles/Styles.scss';
+
+$Nav_web_backgroundColor: #fff !default;
+$Nav_web_shadowColor: #999 !default;
+$Nav_web_shadowBlur: 12px;
+
+/*
+Nav component
+*/
+.scNavWeb {
+	z-index: 1;
+	box-shadow: 0 0 $Nav_web_shadowBlur 0 $Nav_web_shadowColor;
+	background-color: $Nav_web_backgroundColor;
+
+	@extend .nomark;
+
+	.scNavWebList {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
+	.scNavLink {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.scNavWebItem {
+		margin: 6px;
+		padding: 15px;
+		border-bottom: 1px solid #f3f3f3;
+		position: relative;
+		.icon {
+			display: block;
+			color: #444;
+
+			& > svg {
+				display: initial;
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		&:hover {
+			.title {
+				color: $BrandColor;
+			}
+
+			.icon {
+				color: $BrandColor;
+			}
+		}
+
+		&.-active {
+			.title {
+				color: $BrandColor;
+			}
+
+			.icon {
+				color: $BrandColor;
+			}
+
+			::after {
+				content: ' ';
+				background: $BrandColor;
+				border-radius: 10px;
+				position: absolute;
+				width: 6px;
+				height: 70px;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				transform: translateY(-50%);
+				left: -6px;
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+.errorBtnContainer {
+	button {
+		svg {
+			//override antd.btn.icon
+			display: unset !important;
+			margin-top: 0 !important;
+		}
+
+		span {
+			padding-left: 5px;
+		}
+	}
+}

@@ -1,0 +1,77 @@
+@import '../../Styles/Styles.scss';
+
+div.scDocumentTable {
+	> .title {
+		color: $BrandColor;
+		font-size: 0.9rem;
+		font-weight: 600;
+		padding-top: 30px;
+		padding-bottom: 20px;
+		text-align: left;
+	}
+}
+
+div.scDocumentHtml {
+	margin: auto;
+}
+
+div.scDocumentCollapse {
+	text-align: left;
+}
+
+div.scDocumentDate {
+	text-align: right;
+	font-size: 10px;
+	margin-top: 20px;
+}
+
+form.scDocumentForm {
+	> .button {
+		text-align: right;
+	}
+}
+
+div.scDocumentMobile {
+	/* Make sure pdf page does not go out of bounds, when in mobile. */
+	.react-pdf__Page__canvas {
+		width: 100% !important;
+		height: auto !important;
+	}
+}
+
+div.scDocumentPdf {
+	height: 100%;
+	width: 100%;
+	button {
+		svg {
+			margin-top: 0 !important; //overwrite default setting
+		}
+	}
+
+	div.scButtonContainer {
+		display: flex;
+		flex: 1;
+		div.scButtonLeft {
+			flex: 1;
+			display: flex;
+			justify-content: flex-start;
+		}
+		div.scButtonCenter {
+			display: flex;
+			flex: 1;
+			justify-content: center;
+		}
+		div.scButtonRight {
+			flex: 1;
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+
+	.scDocumentLoader {
+		padding: 30px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+}

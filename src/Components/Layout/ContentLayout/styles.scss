@@ -1,0 +1,20 @@
+.scContentLayout {
+	padding: 25px;
+
+	.scContentHeader {
+		display: flex;
+		align-items: center;
+
+		.scContentLayoutBackBtn {
+			margin-right: 5px;
+		}
+
+		h1 {
+			margin: 0;
+		}
+	}
+
+	.scContentLayouHeaderDivider {
+		margin: '12';
+	}
+}

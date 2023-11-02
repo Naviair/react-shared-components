@@ -1,0 +1,155 @@
+@import '../../Styles/Styles.scss';
+
+$searchFill: #3f565d;
+$searchWidth: 270px;
+
+@keyframes fade {
+	from {
+		opacity: 0.5;
+		visibility: hidden;
+		//transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		visibility: visible;
+		//transform: translateY(0);
+	}
+}
+
+.search {
+	width: $searchWidth;
+	border-radius: 20px;
+	background: #f8f8f8;
+	margin-right: 20px;
+	margin-left: 20px;
+	display: inline-block;
+
+	.inputWrapper {
+		display: flex;
+
+		.input {
+			border: initial;
+			background: transparent;
+			outline: medium none invert !important;
+			outline: initial !important;
+			padding: 0.5rem 1rem;
+			line-height: 1.75;
+			font-size: 0.8rem;
+			width: 93%;
+			color: #212121;
+		}
+
+		.iconWrapper {
+			position: relative;
+			width: 38px;
+			height: 38px;
+
+			.icon {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-100%, -50%);
+				border-radius: 10px;
+				color: #d7d7d7;
+				cursor: pointer;
+				color: #3f565d;
+				svg {
+					width: 17px;
+					height: 17px;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+
+	&Mobile {
+		@extend .search;
+		display: flex;
+		// margin-left: 0;
+		left: 0;
+		right: 20px;
+		position: absolute;
+		width: 0px;
+		// top: 20px; //calc(#{$Header_height}/2)
+		z-index: 999;
+		-webkit-transition: width 500ms;
+		transition: width 500ms;
+
+		button:focus {
+			color: initial;
+		}
+
+		.inputWrapper {
+			display: flex;
+			width: 100%;
+
+			.iconWrapperMobile {
+				display: inline-block;
+				margin: 9px 0px 0px 10px;
+				height: 20px;
+				width: 20px;
+
+				.iconMobile {
+					border-radius: 10px;
+					width: 20px;
+					height: 20px;
+					cursor: pointer;
+					color: #3f565d;
+
+					svg {
+						max-width: 20px;
+						max-height: 20px;
+					}
+				}
+			}
+		}
+		&Extended {
+			@extend .searchMobile;
+			width: 300px;
+		}
+	}
+}
+
+.ant-select {
+	padding-top: 4px !important;
+	padding-bottom: 4px !important;
+
+	&.ant-select-disabled {
+		.ant-select-selection-item {
+			display: none;
+		}
+	}
+
+	.ant-select-selection-overflow-item {
+		.searchMenuItemContainer {
+			.description,
+			.tag {
+				width: 0px; // If this is not done, the elements will be acounted for when calculating the width of the "tags" (after selection) and therefore, the tag will have a 100% width because of the content often is at least as wide as the input
+			}
+		}
+	}
+}
+
+.ant-select-dropdown {
+	.ant-select-item {
+		.title {
+			font-weight: bold;
+			padding-bottom: 5px;
+			color: $TextColor !important;
+		}
+
+		.description {
+			font-size: 12px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			color: $TextColor !important;
+			line-height: normal !important;
+		}
+
+		.tag {
+			margin-top: 8px;
+			margin-bottom: 8px;
+			line-height: normal !important;
+		}
+	}
+}

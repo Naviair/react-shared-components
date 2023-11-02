@@ -1,0 +1,63 @@
+@import '../styles.scss';
+
+.ant-menu.searchContent {
+	padding-top: 5px;
+	display: block;
+	position: absolute;
+	min-width: $searchWidth;
+	text-align: left;
+	list-style-type: none;
+	background-color: #fff;
+	background-clip: padding-box;
+	border-radius: 2px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+	&Mobile {
+		@extend .searchContent;
+		position: fixed;
+		overflow-y: scroll;
+		left: 0;
+		width: 100%;
+		margin-top: 0;
+		border-radius: 0px;
+		box-shadow: none;
+		top: $Header_height;
+
+		.searchMenuItem {
+			padding: 0.5rem 1rem;
+		}
+	}
+}
+
+.searchMenuItem.ant-menu-item {
+	max-width: $searchWidth !important;
+	white-space: pre-wrap;
+	height: fit-content !important;
+	.description {
+		font-size: 12px;
+		color: $TextColor;
+		line-height: normal !important;
+	}
+
+	.tag {
+		margin-top: 8px;
+		margin-bottom: 8px;
+		line-height: normal !important;
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: rgb(150, 174, 9) !important;
+		background-color: #f5f5f5;
+	}
+
+	&-active {
+		color: rgb(150, 174, 9) !important;
+		background-color: #f5f5f5 !important;
+
+		&:focus-visible {
+			box-shadow: none !important; // Extra highlight when selected by key
+		}
+	}
+}

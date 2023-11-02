@@ -1,0 +1,19 @@
+.scSingleLayout {
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	display: flex;
+}
+
+.scSingleContent {
+	width: 100%;
+	padding: 50px;
+	//Dynamic size for mobile or web
+	height: inherit;
+	background-color: #f8f8f8;
+}
+
+.scSingleContentFill {
+	@extend .scSingleContent;
+	padding: 0;
+}

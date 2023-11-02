@@ -1,0 +1,65 @@
+.mapboxgl-ctrl-group {
+	overflow: hidden !important;
+	border-radius: 50% !important;
+	transition: 0.3s !important;
+	transition-timing-function: cubic-bezier(0.7, 0.3, 0.1, 1) !important;
+
+	&:not(:empty) {
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3) !important;
+	}
+
+	&.sidepanel-visible {
+		margin-right: 310px !important;
+	}
+
+	&.hidden {
+		visibility: hidden !important;
+	}
+
+	&.text {
+		border-radius: 8px !important;
+	}
+
+	.buttonMap {
+		position: relative !important;
+		z-index: 1029 !important;
+		background: white;
+		min-width: 40px !important;
+		min-height: 40px !important;
+		//color: #212121 !important;
+		box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.04) !important;
+		color: #444 !important;
+
+		&.-active {
+			border: 2px solid #444 !important;
+			padding: 2px !important;
+		}
+
+		&.-withTitle {
+			min-width: fit-content !important;
+			padding-left: 10px !important;
+			padding-right: 10px !important;
+		}
+
+		.button-div {
+			&Text {
+				@extend .button-div;
+				display: flex;
+
+				> .button-title {
+					margin-left: 10px;
+					margin-right: 10px;
+					font-size: 14px;
+					color: #444 !important;
+				}
+			}
+		}
+
+		svg {
+			vertical-align: top !important;
+			color: #444 !important;
+			width: 22px !important;
+			height: 22px !important;
+		}
+	}
+}

@@ -1,0 +1,62 @@
+@import '../../../Styles/Styles.scss';
+
+$icon-width: 145px;
+$icon-height: 145px;
+$icon-wrapper-height: 150px;
+$icon-wrapper-margin: 10px;
+
+.maintenance {
+	color: inherit;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	background-color: #f8f8f8;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.maintenanceContent {
+		width: 60%;
+
+		h1 {
+			color: inherit;
+			display: inline-block;
+			border-bottom: 1px solid;
+		}
+
+		// .subtitle {
+
+		// }
+
+		.iconWrapper {
+			height: $icon-wrapper-height;
+			margin: $icon-wrapper-margin;
+
+			.icon {
+				display: inline-block;
+				color: #d7d7d7;
+				width: $icon-width;
+				height: $icon-height;
+				color: #3f565d;
+			}
+		}
+
+		&_mobile {
+			@extend .maintenanceContent;
+			width: 30%;
+
+			.iconWrapper {
+				@extend .iconWrapper;
+				height: calc($icon-wrapper-height - 30%);
+				margin: calc($icon-wrapper-margin - 30%);
+
+				.icon {
+					@extend .icon;
+					width: calc(#{$icon-width} - 30%);
+					height: calc(#{$icon-height} - 30%);
+					color: #3f565d;
+				}
+			}
+		}
+	}
+}
