@@ -25,6 +25,7 @@ jobs:
         with:
           node-version: 16
       - run: npm config set '//npm.fontawesome.com/:_authToken' "${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}"
+      - run: npm config set '//npm.pkg.github.com/:_authToken' "${{ secrets.GITHUB_TOKEN }}"
       - run: npm install
       - run: npm run-script build
 
