@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { TableProps } from 'antd/lib/table';
 import { DownloadOutlined } from '@ant-design/icons';
-import { Locale } from 'antd/lib/locale-provider';
+import { Locale } from 'antd/lib/locale';
 import { TableFilter, TFilter } from './TableFilter';
 import './styles.scss';
 import { Button, ConfigProvider, Divider, message, Table as AntdTable } from 'antd';
