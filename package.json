@@ -1,5 +1,12 @@
 {
 	"name": "@Naviair/react-shared-components",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Naviair/react-shared-components.git"
+	},
+	"publishConfig": {
+		"@Naviair:registry": "https://npm.pkg.github.com"
+	},
 	"version": "4.2.0",
 	"description": "",
 	"main": "dist/index.js",
